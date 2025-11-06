@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        swash: ["Berkshire Swash", 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-[#F6E7D8] overflow-x-hidden relative">
+    <canvas id="three-bg" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <!-- NAVBAR -->
+    <nav class="w-full fixed top-0 left-0 shadow z-20 bg-[#F6E7D8]">
+        <div class="mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/img/logo.png" alt="Logo" class="w-12 h-12 object-contain">
+                <h1 class="text-xl font-swash font-semibold">Sunset Brew</h1>
+            </div>
+
+            <div class="hidden md:flex gap-6 text-sm font-swash">
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#promo">Promo</a>
+                <a href="#galery">Galery</a>
+                <a href="#galery">Contact</a>
+                <a href="#team">Our Team</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="h-screen relative flex items-center bg-black">
+        <!-- <img src="assets/img/banner.png" class="absolute inset-0 w-full h-full object-cover opacity-60"> -->
+        <img src="assets/img/banner-animate.gif" class="absolute inset-0 w-full h-full object-cover opacity-60">
+
+        <div class="relative text-white px-8 md:px-16 -mt-20">
+            <h1 class="text-[72px] md:text-[96px] lg:text-[110px] font-swash leading-tight mb-6">
+                brewed to<br>perfection
+            </h1>
+
+
+            <button class="bg-[#A85400] px-6 py-2 rounded shadow text-lg font-semibold hove#864300FF] transition">
+                Order Now
+            </button>
+        </div>
+
+    </section>
+
+
+    <section id="about" class="max-w-6xl mx-auto px-16 py-24">
+        <h2 class="text-center text-3xl font-swash mb-14">About</h2>
+
+        <div class="md:flex items-start gap-15">
+
+            <!-- LEFT TEXT -->
+            <p class="md:w-1/2 leading-relaxed text-[17px]">
+                <span class="font-semibold">Sunset Brew</span> didirikan pada 20 October tahun 2025
+                Oleh <span class="font-semibold">Febriany Renata</span> Seorang <span class="font-semibold">CEO San Digital Agency</span>.
+                Toko tunggal yang menjual Kopi, Tea,
+                Aneka Snack dan Kue.
+                <br><br>
+                Awal nya Sunset Brew sendiri di bangun hanya untuk
+                teman nongkrong dan ngopi, seiring berjalan nya waktu
+                Teknologi berkambang makin canggih.
+                Ia mendirikan usaha <span class="font-semibold">San Digital Agency</span>,
+                usaha pendidikan seperti IT Developer, Web Desainer, etc.
+            </p>
+
+            <!-- RIGHT IMAGE BLOCK -->
+            <div class="relative md:w-1/2 flex justify-end">
+                <div class="w-[320px] md:w-[380px]">
+                    <img src="assets/img/about.jpg" class="rounded shadow-md w-full">
+                </div>
+
+                <img src="assets/img/kacang-kopi.png" class="absolute bottom-[-70px] right-[-60px] w-40 md:w-52 pointer-events-none select-none">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section id="menu" class="px-6 py-20">
+        <h2 class="text-center text-3xl font-swash mb-10">Menu</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <img src="assets/img/menu-1.png" class="rounded shadow">
+            <img src="assets/img/menu-2.png" class="rounded shadow">
+            <img src="assets/img/menu-3.png" class="rounded shadow">
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="#" class="bg-[#5B2D00] text-white px-6 py-2 rounded-full">Our Menu</a>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <section id="promo" class="px-6 py-20 bg-[#F3DCC2]">
+        <h2 class="text-center text-3xl font-swash mb-10">Promo</h2>
+
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-6">
+
+            <!-- Gambar Kopi -->
+            <div class="md:flex md:items-center md:gap-10">
+
+                <!-- Gambar Promo -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-[180px] h-[220px] md:w-[220px] md:h-[260px]">
+
+                        <!-- Gelas belakang -->
+                        <img src="assets/img/promo.png" class="absolute left-0 top-0 w-[220px] md:w-[260px] opacity-95">
+
+                        <!-- Gelas depan -->
+                        <img src="assets/img/promo.png" class="absolute left-8 top-6 w-[200px] md:w-[240px]">
+                    </div>
+
+                    <p class="text-xl font-semibold mt-4 text-center text-[#6B3F23]">
+                        Coffee Late
+                    </p>
+                </div>
+
+                <!-- Teks Promo -->
+                <div class="mt-10 md:mt-0 text-center md:text-left">
+                    <p class="text-3xl md:text-4xl font-medium leading-relaxed">
+                        Buy 1 (Medium) Get 1 (Venti)<br>Free
+                    </p>
+
+                    <p class="text-4xl font-swash mt-4">
+                        30.000
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- GALERI -->
+    <section id="galery" class="px-6 py-20">
+        <h2 class="text-center text-3xl font-swash mb-10">Galery</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto justify-items-start">
+            <div class="w-full aspect-square overflow-hidden rounded shadow">
+                <img src="assets/img/gallery-1.png" class="w-full h-full object-cover">
+            </div>
+
+            <div class="w-full aspect-square overflow-hidden rounded shadow">
+                <img src="assets/img/gallery-2.png" class="w-full h-full object-cover">
+            </div>
+
+            <div class="w-full aspect-square overflow-hidden rounded shadow">
+                <img src="assets/img/gallery-3.png" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full aspect-square overflow-hidden rounded shadow">
+                <img src="assets/img/gallery-4.jpg" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
